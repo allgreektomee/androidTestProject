@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+    android: api 26이상 버전
+    app:api 26이 버전
+    -->
+
+    <font
+        android:font="@font/notosanskrbold"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+
+        app:font="@font/notosanskrbold"
+        app:fontStyle="normal"
+        app:fontWeight="700"
+        tools:targetApi="o" />
+
+    <font
+        android:font="@font/notosanskr_black"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+
+        app:font="@font/notosanskr_black"
+        app:fontStyle="normal"
+        app:fontWeight="700"
+        tools:targetApi="o" />
+
+    <font
+        android:font="@font/notosanskr_light"
+        android:fontStyle="normal"
+        android:fontWeight="200"
+
+        app:font="@font/notosanskr_light"
+        app:fontStyle="normal"
+        app:fontWeight="200"
+        tools:targetApi="o" />
+
+</font-family>

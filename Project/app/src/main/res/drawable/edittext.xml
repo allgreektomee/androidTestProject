@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#ffffff" />
+    <stroke
+        android:width="1.00dp"
+        android:color="#c4c4c4" />
+
+    <corners
+        android:topLeftRadius="5.00dp"
+        android:topRightRadius="5.00dp"
+        android:bottomLeftRadius="5.00dp"
+        android:bottomRightRadius="5.00dp"/>
+</shape>
+    <!--
+        - android:radius 모든 모서리를 둥글게
+        - android:topLeftRadius : 왼 상단 모서리를 둥글게 처리
+        - android:topRightRadius : 오른 상단 모서리를 둥글게 처리
+        - android:bottomLeftRadius : 왼쪽 하단 모서리를 둥글게 처리
+        - android:bottomRightRadius : 오른쪽 하단 모서리를 둥글게 처리
+    -->
