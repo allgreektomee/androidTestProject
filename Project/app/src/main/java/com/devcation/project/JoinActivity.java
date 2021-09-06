@@ -22,7 +22,7 @@ public class JoinActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.input_activity);
+        setContentView(R.layout.activity_join);
 
         edtPhone = findViewById(R.id.edtphone);
         edtName = findViewById(R.id.edtname);
