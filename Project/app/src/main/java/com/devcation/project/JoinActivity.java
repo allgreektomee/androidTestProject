@@ -1,6 +1,7 @@
 package com.devcation.project;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.devcation.project.data.ParcelData;
 import com.google.android.material.snackbar.Snackbar;
 
 public class JoinActivity extends AppCompatActivity {
@@ -29,7 +31,7 @@ public class JoinActivity extends AppCompatActivity {
         edtUserName = findViewById(R.id.edtusername);
         edtPassword = findViewById(R.id.edtpassword);
 
-        Button btnResult = findViewById(R.id.result);
+        Button btnResult = findViewById(R.id.btnresult);
         btnResult.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -47,6 +49,9 @@ public class JoinActivity extends AppCompatActivity {
                                         edtUserName.getText()+
                                         edtPassword.getText()
                                 , Toast.LENGTH_LONG).show();
+
+
+                        reqLogin();
                     }
                 });
                 builder.setNeutralButton("아니오", new DialogInterface.OnClickListener() {
@@ -75,6 +80,18 @@ public class JoinActivity extends AppCompatActivity {
         });
     }
 
+    public void reqLogin()
+    {
+        ParcelData userData = new ParcelData(edtPhone.getText().toString(),
+                edtName.getText().toString(),
+                edtUserName.getText().toString(),
+                edtPassword.getText().toString());
+
+        Intent i = getIntent();
+        i.putExtra("join", userData);
+        setResult(RESULT_OK, i);
+        finish();
+    }
     public void onBtn4(View view) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

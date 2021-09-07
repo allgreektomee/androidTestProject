@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
 
+        <activity android:name=".main.MainTabActivity"></activity>
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".JoinActivity"></activity>
 
