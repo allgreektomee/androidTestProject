@@ -13,6 +13,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.devcation.project.data.ParcelData;
+import com.devcation.project.main.MainBottomActivity;
 import com.devcation.project.main.MainTabActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -54,9 +55,9 @@ public class LoginActivity extends AppCompatActivity {
 //        startActivityForResult(intent,1001);//액티비티 띄우기
 //        ParcelData data = new ParcelData("코리아","신촌","01011112222","안녕하세요");
 
+//        Intent intent = new Intent(LoginActivity.this, MainBottomActivity.class);
+
         Intent intent = new Intent(LoginActivity.this, MainTabActivity.class);
-
-
         intent.putExtra("join", data);
         startActivityResult.launch(intent);
     }

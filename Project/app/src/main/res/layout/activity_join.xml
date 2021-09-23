@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -89,6 +90,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
+                android:textColor="#000000"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -119,6 +121,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
+                android:textColor="#000000"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -149,6 +152,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
+                android:textColor="#000000"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -180,6 +184,7 @@
                 android:hint="least 6 characters"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
+                android:textColor="#000000"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -199,6 +204,7 @@
             android:gravity="center"
             android:lineSpacingExtra="5sp"
             android:text="By continuing, you agree to accept our  Privacy Policy \nTerms of Service."
+            android:textColor="#000000"
             android:textSize="10sp" />
 
     </LinearLayout>

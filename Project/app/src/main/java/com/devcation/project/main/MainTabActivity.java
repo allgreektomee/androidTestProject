@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -20,6 +19,7 @@ import com.devcation.project.data.ParcelData;
 
 public class MainTabActivity extends AppCompatActivity {
     TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,10 +29,10 @@ public class MainTabActivity extends AppCompatActivity {
             userDataSetting(i.getParcelableExtra("join"));
         }
 
+
     }
     private void userDataSetting(ParcelData data )
     {
-
         textView = findViewById(R.id.textView);
         textView.setText("name "+ data.name +
                 "\nuserName "+data.userName+
@@ -41,7 +41,7 @@ public class MainTabActivity extends AppCompatActivity {
     }
 
     private void moveLoginActivity() {
-//        Intent intent = new Intent(getApplicationContext(),SecondActivity.class);
+//        Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
 //        startActivityForResult(intent,1001);//액티비티 띄우기
 //        ParcelData data = new ParcelData("코리아","신촌","01011112222","안녕하세요");
 
