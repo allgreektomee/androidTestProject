@@ -14,24 +14,24 @@ public class MainBottomActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
-    f1_feed f1Feed;
-    Fragment2 fragment2;
-    Fragment3 fragment3;
-    Fragment4 fragment4;
-    Fragment5 fragment5;
+    Tab1_Feed feed;
+    Tab2_Search search;
+    Tab3_Post post;
+    Tab4_Like like;
+    Tab5_Profile profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainbottom);
 
-        f1Feed = new f1_feed();
-        fragment2 = new Fragment2();
-        fragment3 = new Fragment3();
-        fragment4 = new Fragment4();
-        fragment5 = new Fragment5();
+        feed = new Tab1_Feed();
+        search = new Tab2_Search();
+        post = new Tab3_Post();
+        like = new Tab4_Like();
+        profile = new Tab5_Profile();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, f1Feed).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, feed).commit();
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -41,32 +41,32 @@ public class MainBottomActivity extends AppCompatActivity {
                     case R.id.menu_bottom_1:
 
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, f1Feed).commit();
+                                .replace(R.id.container, feed).commit();
 
                         return true;
                     case R.id.menu_bottom_2:
 
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, fragment2).commit();
+                                .replace(R.id.container, search).commit();
 
                         return true;
                     case R.id.menu_bottom_3:
 
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, fragment3).commit();
+                                .replace(R.id.container, post).commit();
 
                         return true;
                     case R.id.menu_bottom_4:
 
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, fragment4).commit();
+                                .replace(R.id.container, like).commit();
 
                         return true;
 
                     case R.id.menu_bottom_5:
 
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.container, fragment5).commit();
+                                .replace(R.id.container, profile).commit();
 
                         return true;
                 }

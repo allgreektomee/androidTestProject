@@ -1,15 +1,12 @@
 package com.devcation.project.main;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import com.devcation.project.R;
 
@@ -19,16 +16,19 @@ import com.devcation.project.feed.Fragment3;
 import com.devcation.project.feed.Fragment4;
 import com.google.android.material.tabs.TabLayout;
 
-public class f1_feed extends Fragment {
+public class Tab1_Feed extends Fragment {
     Toolbar toolbar;
 
-    com.devcation.project.feed.Fragment1 fragment1;
+    Fragment1 fragment1;
     Fragment2 fragment2;
     Fragment3 fragment3;
     Fragment4 fragment4;
+
+    public String test;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.mainbottom_fragment1, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.tab1_feed, container, false);
 
         toolbar = rootView.findViewById(R.id.toolbar);
         fragment1 = new Fragment1();
@@ -51,6 +51,7 @@ public class f1_feed extends Fragment {
                 Fragment selected = null;
                 if (position == 0) {
                     selected = fragment1;
+
                 } else if (position == 1) {
                     selected = fragment2;
                 } else if (position == 2) {
