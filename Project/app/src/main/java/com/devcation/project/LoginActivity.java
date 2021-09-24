@@ -60,6 +60,8 @@ public class LoginActivity extends AppCompatActivity {
 //        Intent intent = new Intent(LoginActivity.this, MainTabActivity.class);
         intent.putExtra("join", data);
         startActivityResult.launch(intent);
+        overridePendingTransition(R.anim.move, R.anim.exit);
+//        overridePendingTransition(보여지는 액티비티, 없어지는 액티비티);
     }
 
 

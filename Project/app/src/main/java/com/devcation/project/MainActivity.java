@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         startActivityResult.launch(intent);
+        overridePendingTransition(R.anim.move, R.anim.exit);
+//        overridePendingTransition(보여지는 액티비티, 없어지는 액티비티);
     }
 
 
