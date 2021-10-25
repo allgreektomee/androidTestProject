@@ -13,9 +13,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.devcation.project.R;
-import com.devcation.project.list.OnItemClickListener;
-import com.devcation.project.list.UserData;
-import com.devcation.project.list.UserDataAdapter;
+import com.devcation.project.feed.list.OnItemClickListener;
+import com.devcation.project.feed.list.UserData;
+import com.devcation.project.feed.list.UserDataAdapter;
 
 
 public class Fragment4 extends Fragment {

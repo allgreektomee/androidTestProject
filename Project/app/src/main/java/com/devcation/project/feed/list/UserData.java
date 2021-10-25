@@ -1,4 +1,4 @@
-package com.devcation.project.list;
+package com.devcation.project.feed.list;
 
 public class UserData {
     public String phoneNumber;
