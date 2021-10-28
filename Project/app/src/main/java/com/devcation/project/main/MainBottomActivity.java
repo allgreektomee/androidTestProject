@@ -1,6 +1,7 @@
 package com.devcation.project.main;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.devcation.project.R;
+import com.devcation.project.post.PostDatabase;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainBottomActivity extends AppCompatActivity {
@@ -19,6 +21,9 @@ public class MainBottomActivity extends AppCompatActivity {
     Tab3_Post post;
     Tab4_Like like;
     Tab5_Profile profile;
+
+
+    PostDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,5 +79,20 @@ public class MainBottomActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+
+        if (database != null) {
+            database.close();
+            database = null;
+        }
+
+        database = PostDatabase.getInstance(this);
+
+        boolean isOpen = database.open();
+        if (isOpen) {
+            Log.d("PostDatabase", "database is open.");
+        } else {
+            Log.d("PostDatabase", "database is not open.");
+        }
     }
 }
