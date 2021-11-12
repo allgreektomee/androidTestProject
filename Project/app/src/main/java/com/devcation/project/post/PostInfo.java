@@ -4,10 +4,12 @@ public class PostInfo {
 
     String title;
     String contents;
+    String path;
 
-    public PostInfo(String title, String contents) {
+    public PostInfo(String title, String contents, String path) {
         this.title = title;
         this.contents = contents;
+        this.path = path;
     }
 
     public String getTitle() {
@@ -26,5 +28,11 @@ public class PostInfo {
         this.contents = contents;
     }
 
+    public String getPath() {
+        return path;
+    }
 
+    public void setPath(String path) {
+        this.path = path;
+    }
 }

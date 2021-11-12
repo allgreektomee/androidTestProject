@@ -149,6 +149,7 @@ public class PostDatabase {
 		        			+ "  _id INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT, "
 		        			+ "  TITLE TEXT, "
 		        			+ "  CONTENTS TEXT, "
+							+ "  PHOTO_PATH TEXT, "
 		        			+ "  CREATE_DATE TIMESTAMP DEFAULT CURRENT_TIMESTAMP "
 		        			+ ")";
             try {
@@ -188,10 +189,11 @@ public class PostDatabase {
 
     }
 
-	public void insertRecord(String title, String contents) {
+
+	public void insertRecord(String title, String contents ,String path) {
 		try {
 			Log.e(TAG, "insert SQL.");
-			db.execSQL( "insert into " + TABLE_POST + "(TITLE, CONTENTS) values ('" + title + "', '" + contents + "');" );
+			db.execSQL( "insert into " + TABLE_POST + "(TITLE, CONTENTS, PHOTO_PATH ) values ('" + title + "', '" + contents + "', '" + path + "');" );
 		} catch(Exception ex) {
 			Log.e(TAG, "Exception in executing insert SQL.", ex);
 		}
@@ -201,15 +203,15 @@ public class PostDatabase {
 		ArrayList<PostInfo> result = new ArrayList<PostInfo>();
 
 		try {
-			Cursor cursor = db.rawQuery("select TITLE, CONTENTS from " + TABLE_POST, null);
+			Cursor cursor = db.rawQuery("select TITLE, CONTENTS, PHOTO_PATH from " + TABLE_POST, null);
 			for (int i = 0; i < cursor.getCount(); i++) {
 				cursor.moveToNext();
 				String title = cursor.getString(0);
 				String contents = cursor.getString(1);
-
+				String path = cursor.getString(2);
 
 				Log.e(TAG, "selectAll "+title);
-				PostInfo info = new PostInfo(title, contents);
+				PostInfo info = new PostInfo(title, contents, path);
 				result.add(info);
 			}
 

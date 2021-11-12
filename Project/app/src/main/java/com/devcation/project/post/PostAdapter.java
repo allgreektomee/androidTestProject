@@ -1,8 +1,10 @@
 package com.devcation.project.post;
 
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -64,13 +66,14 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> im
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView textView;
         TextView textView2;
+        ImageView imageView3;
 
         public ViewHolder(View itemView, final PostAdapter listener) {
             super(itemView);
 
             textView = itemView.findViewById(R.id.textView);
             textView2 = itemView.findViewById(R.id.textView2);
-
+            imageView3 = itemView.findViewById(R.id.imageView3);
 
             itemView.setOnClickListener(new View.OnClickListener(){
 
@@ -89,6 +92,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> im
         public void setItem(PostInfo item) {
             textView.setText(item.title);
             textView2.setText(item.contents);
+            imageView3.setImageURI(Uri.parse("file://" + item.getPath()));
 
         }
 
